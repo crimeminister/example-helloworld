@@ -1,0 +1,17 @@
+;; shadow-cljs.edn
+;;
+;; shadow-cljs configuration
+
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [;; Promise library for Clojure(Script)
+  [funcool/promesa "8.0.450"]]
+
+ :builds
+ {:client {:target :node-script
+           :main ca.clojurist.hello/main
+           :output-to "dist/client.js"}}}
