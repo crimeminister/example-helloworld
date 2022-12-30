@@ -9,7 +9,7 @@
 
  :dependencies
  [;; Promise library for Clojure(Script)
-  [funcool/promesa "10.0.571"]]
+  [funcool/promesa "10.0.582"]]
 
  :builds
  {:client {:target :node-script
