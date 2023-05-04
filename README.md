@@ -44,11 +44,11 @@ The project comprises of:
   - [Learn about the client](#learn-about-the-client)
     - [Entrypoint](#entrypoint)
     - [Establish a connection to the cluster](#establish-a-connection-to-the-cluster)
-    - [Load the helloworld on-chain program if not already loaded](#load-the-helloworld-on-chain-program-if-not-already-loaded)
+    - [Check if the helloworld on-chain program has been deployed](#check-if-the-helloworld-on-chain-program-has-been-deployed)
     - [Send a "Hello" transaction to the on-chain program](#send-a-hello-transaction-to-the-on-chain-program)
     - [Query the Solana account used in the "Hello" transaction](#query-the-solana-account-used-in-the-hello-transaction)
   - [Learn about the on-chain program](#learn-about-the-on-chain-program)
-    - [Programming on Solana](#programming-on-Solana)
+    - [Programming on Solana](#programming-on-solana)
   - [Pointing to a public Solana cluster](#pointing-to-a-public-solana-cluster)
   - [Expand your skills with advanced examples](#expand-your-skills-with-advanced-examples)
 
@@ -66,7 +66,7 @@ on your OS, they may already be installed:
 - Install node (v14 recommended)
 - Install npm
 - Install Rust v1.56.1 or later from https://rustup.rs/
-- Install Solana v1.8.14 or later from
+- Install Solana v1.10.35 or later from
   https://docs.solana.com/cli/install-solana-cli-tools
 
 If this is your first time using Rust, these [Installation
@@ -79,7 +79,7 @@ Notes](README-installation-notes.md) might be helpful.
 1. Set CLI config url to localhost cluster
 
 ```bash
-solana config set --url localhost
+solana config set --url http://127.0.0.1:8899
 ```
 
 2. Create CLI Keypair
@@ -142,7 +142,7 @@ Public key values will differ:
 
 ```bash
 Let's say hello to a Solana account...
-Connection to cluster established: http://localhost:8899 { 'feature-set': 2045430982, 'solana-core': '1.7.8' }
+Connection to cluster established: http://127.0.0.1:8899 { 'feature-set': 2045430982, 'solana-core': '1.7.8' }
 Using account AiT1QgeYaK86Lf9kudqKthQPCWwpG8vFA1bAAioBoF4X containing 0.00141872 SOL to pay for fees
 Using program Dro9uk45fxMcKWGb1eWALujbTssh6DW8mb4x8x3Eq5h6
 Creating account 8MBmHtJvxpKdYhdw6yPpedp6X6y2U9dCpdYaZJdmwV3A to say hello to
@@ -266,7 +266,7 @@ solana config set --url devnet
 
 To point back to the local cluster:
 ```bash
-solana config set --url localhost
+solana config set --url http://127.0.0.1:8899
 ```
 
 ## Writing the client in Rust
